@@ -1,0 +1,100 @@
+.main-page {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.page-title {
+  margin: 30px auto 15px auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333333df;
+  text-align: center;
+  width: 30%;
+  min-width: 300px;
+  font-size: 24px;
+  font-family: monospace;
+  font-weight: 600;
+  color: #333333df;
+}
+.content-wrapper {
+  flex: 1;
+}
+.input-wrapper {
+  border: 1px solid #333333df;
+  border-radius: 2px;
+  padding: 5px 0;
+  margin: 15px 0;
+  box-shadow: inset 0 0 49px -10px #333;
+
+  .text-input {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    font-size: 16px;
+    min-width: 100px;
+    max-width: 250px;
+    font-family: monospace;
+    outline: none !important;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+  .transparent-input {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      animation-name: backgroundColorInputTransition;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-duration: 2s;
+    }
+  }
+}
+.submit-button {
+  margin: 20px 0 10px 0;
+  background-color: #333333bc;
+  padding: 7px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: 600;
+  color: #ecd8c0;
+  box-shadow: 0 0 60px 2px rgba(236,216,192,1);
+  border: 2px solid #e6ac6775;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &.clicked {
+    animation-name: pulse;
+    animation-iteration-count: 1;
+    animation-duration: 0.7s;
+  }
+  &.disabled {
+    opacity: 0.3;
+    cursor: initial;
+  }
+  &.green {
+    background-color: #007b25e0;
+    border-color: #044c23c2;
+    color: #333;
+  }
+  &.bg {
+    font-size: 16px;
+  }
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: monospace;
+  margin: 30px auto;
+  padding-top: 15px;
+  border-top: 1px solid #333333fd;
+  width: 15%;
+  min-width: 200px;
+}

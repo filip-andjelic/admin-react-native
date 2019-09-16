@@ -1,0 +1,126 @@
+.main-navbar {
+  background-color: $theme-dark-bg;
+  background: linear-gradient(90deg, rgba(51, 51, 51, 0.9419117988992471) 0%, rgba(51, 51, 51, 0.2612395299916842) 61%, rgba(255, 189, 69, 0.09037118265274857) 100%);
+  border-radius: 4px;
+  padding: 5px;
+  margin: 25px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  min-height: 75px;
+  transition: all 2.3s;
+
+  &.unlocked {
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.8214636196275386) 0%, rgba(51, 51, 51, 0.6085784655659139) 23%, rgba(51, 51, 51, 0.4489146000196954) 50%, rgba(51, 51, 51, 0.6225840678068102) 80%, rgba(51, 51, 51, 0.846673703661152) 100%);
+    min-height: 45px;
+    bottom: -20px;
+
+    .ft-logo {
+      left: 100%;
+      transform: translateX(calc(-100% - 10px));
+      top: -10px;
+      box-shadow: 0 0 30px 15px rgba(135, 112, 71, 0.34);
+      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+        margin-left: -20px;
+
+        #logout-button {
+          width: 100%;
+          height: 100%;
+        }
+
+        .tooltip-wrapper {
+          left: 0;
+        }
+      }
+    }
+
+    .navbar-items {
+      opacity: 1;
+      bottom: -10px;
+      height: 30px;
+    }
+
+    .navbar-footer {
+      opacity: 1;
+    }
+  }
+
+  .ft-logo {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    transition: all 2.1s;
+  }
+
+  .navbar-items {
+    display: flex;
+    margin: auto;
+    height: 0;
+    opacity: 0;
+    position: relative;
+    bottom: -60px;
+    transition: all 2.5s;
+    z-index: 5;
+
+    .navbar-item {
+      color: $theme-basic;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-family: monospace;
+      font-weight: 600;
+      padding: 3px 12px 0 12px;
+      margin: 0 4px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      background-color: $theme-light-bg;
+      transition: all 0.7s;
+      cursor: pointer;
+      text-shadow: 1px 0 12px $theme-dark-bg;
+
+      &.selected {
+        margin-top: -10px;
+        color: #6f6f6f;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+
+      &:hover {
+        margin-top: -10px;
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+
+.ft-logo {
+  background-image: url('./assets/ft-logo.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 4px;
+  z-index: 5;
+
+  &.md {
+    width: 110px;
+    height: 65px;
+  }
+}
+
+.navbar-footer {
+  opacity: 0;
+  transition: all 1.5s;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  background-color: $theme-light-bg;
+  top: calc(100% - -3px);
+  border-radius: 4px;
+  height: 150px;
+  margin-left: -5px;
+  background: linear-gradient(180deg, rgba(209, 210, 212, 1) 0%, rgba(209, 210, 212, 0.7346288857339811) 40%, rgba(209, 210, 212, 0.25003504819896705) 75%, rgba(209, 210, 212, 0) 100%);
+}

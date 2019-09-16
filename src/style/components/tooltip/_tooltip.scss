@@ -1,0 +1,29 @@
+.tooltip-wrapper {
+  color: $theme-tooltip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  padding: 7px 0 5px 0;
+  border-radius: 6px;
+  background-color: $theme-basic-light;
+  width: 100%;
+  transition: all 1.2s;
+  left: -6000px;
+  box-shadow: 0 0 15px 5px rgba(135,112,71,.34);
+
+  &.under {
+    top: calc(100% + 10px);
+  }
+  .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid $theme-basic-light;
+    position: absolute;
+    top: -7px;
+  }
+}

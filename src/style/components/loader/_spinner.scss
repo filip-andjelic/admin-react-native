@@ -1,0 +1,66 @@
+#ft-spinner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $theme-basic-bg;
+  box-shadow: inset 0 0 60px 20px #33333377;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  .main-spinner {
+    background-image: url('./assets/ft-spinner.png');
+  }
+  .shadow-caster {
+    width: 10px;
+    height: 40px;
+    transform: translateY(calc(-100% - 30px));
+    box-shadow: 0 0 150px 90px $theme-tooltip;
+    background-color: #7d7d7e87;
+    z-index: -1;
+    border-radius: 50%;
+  }
+}
+.spinner-wrapper {
+  display: none;
+}
+.main-spinner {
+  width: 90px;
+  height: 90px;
+  //box-shadow: 0 0 170px 22px $theme-tooltip;
+  background-size: 100% 100%;
+  animation-name: flip;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+#main-table-spinner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f79622;
+  box-shadow: inset 0 0 60px -10px #f5f5ffed;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  .table-spinner {
+    background-image: url('./assets/ft-spinner.png');
+    width: 90px;
+    height: 90px;
+    background-size: 100% 100%;
+    animation-name: spinAroundCenter;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+  }
+  .shadow-caster {
+    width: 10px;
+    height: 40px;
+    transform: translateY(calc(-100% - 30px));
+    box-shadow: 0 0 150px 90px #f5f5ffed;
+    background-color: #f5f5ffed;
+    z-index: -1;
+    border-radius: 50%;
+  }
+}
